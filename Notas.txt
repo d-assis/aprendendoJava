@@ -1,0 +1,83 @@
+Aula 1
+História da linguagem Java
+	- Surgiu como uma proposta de linguagem capaz de promover a comunicação entre diversos dispositivos.
+
+	- desenvolvida inicialmente pela sun microsystems, mais especificamente o "green team" de James Gosling
+
+	- já foi chamada de: green talk, oak e finalmente Java
+
+	- orientada a objetos
+
+	- linguagem com código aberto
+
+	- foi repensada para uso na web em meados de 1996
+
+	- linguagem adquirida pela oracle em 2009
+
+	- diferente da linguagem javascript criada pela netscape
+
+Aula 1ex
+	- delphi não é linguagem de programação mas sim uma IDE voltada para criação de código em object pascal. Porém, convencionou-se referir a Linguagem object pascal usando o nome da IDE.
+
+	- para gerar um executável a partir de um código fonte de alto nível é necessário o uso de um compilador, que a partir da entrada fornecida gera um código objeto, não executável, em linguagem de máquina (baixo nível). Posteriormente, fazemos o uso de um linker para então transformar o código objeto gerado pelo compilador em um executável. Também é possível gerar um executável de maneira direta a partir do código fonte em alto nível usando um interpretador.
+
+Aula 2
+Como funciona a linguagem Java
+	- Na linguagem Java, para obter um executável a partir de código de alto-nível, é necessária a atuação de 2 softwares intermediários, o complilador (javaC), que gera um bytecode não executável a partir do código de alto-nível, e a máquina virtual java (JVM) que interpreta o bytecode gerado pelo javaC e repassa as informações contidas no código para que a máquina execute o programa.
+
+	- importante notar que o bytecode gerado pelo compliador java, pode servir como input para as JVMs de qualquer sistema operacional, evitando a necessidade de repetir o processo de compilação para cada sistema.
+
+	- conceito WORA: write once run anywhere. Descreve a vantagem competitiva da linguagem java
+
+	- JRE: java runtime environment. Conjunto de pacotes e dependências para execução de programas em java. É composto por:
+		- JVM e subpartes:
+			- loader
+			carrega as informações do bytecode na memória da máquina virtual Java
+			- verificador
+			Verifica se o bytecode carregado na memória da JVM pode ser executdo sem problemas
+			- interpretador
+			faz a transposição do bytecode para código nativo do sistema que vai executar o programa
+			- gerenciador
+			Gerencia o uso de memória dentro da máquina virtual
+			- compilador JIT (just in time)
+		- Bibliotecas
+
+	- JDK: java development kit. Conjunto de pacotes e dependências para criação de programas em java. Composto por:
+		- JRE e todas as subpartes
+		- linguagem Java ou JavaLang
+		- JavaTools e subpartes:
+			- JavaC
+			- Debugger
+			- APIs
+
+	- IDE: integrated development environment ou ambiente de desenvolvimento integrado.
+
+Aula 2ex
+	- um código compilado ocupa mais memória durante a execução, porém é executado mais rápido
+
+	- um código interpretado consome menos memória mas é executado de forma mais lenta
+
+	- o sinal usado para atribuição em Java é <-
+
+Aula 3
+instalando JDK
+	- o Kit de desenvolvimento Java está disponível em diferentes edições:
+		- Standard Edition (SE)
+			Mais adequado para desenvolvimento de aplicativos com interface gráfica
+		- Enterprise Edition (EE)
+			Mais adequado para desenvolvimento de aplicativos que tenham ligação com grandes bancos de dados e sistemas robustos
+		- Micro Edition (ME)
+			Mais adequado para desenvolvimento de aplicações utilizadas em dispositivos móveis, wearables e etc
+
+Aula 3ex
+	- entre os tipos primitivos de dados da linguagem Java, pode-se referir a strings como "literal" ou "caracteres"
+
+Aula 4
+Primeiro programa
+
+	- Dentro de um programa java, há uma hierarquia entre os blocos do código. Começamos com package (pacotes) que contém public class (classes) e estas por sua vez contém métodos, declarados como public static void.
+	- A linguagem apresenta diferenças entre informações declaradas com nomes iniciados por letras maiúsculas e minúsculas.
+	- pacotes são declarados com letras minúsculas
+	- classes são declaradas com nomes iniciados por letra maiúscula e camelCase
+	- métodos são declarados com letras minúsculas
+	- consulte a imagem 4A para outros casos de uso relacionadas a maiúsculas e minúsculas na declaração de informações 

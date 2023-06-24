@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author dassi
+ *
+ */
+module sintaxebasica {
+}

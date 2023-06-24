@@ -1,0 +1,18 @@
+package bytebank_encapsulado;
+
+public class TestaGetSet {
+	public static void main(String[] args) {
+		Conta nConta = new Conta();
+		
+		nConta.setNumero(1337);
+		System.out.println(nConta.getNumero());
+		
+		Cliente lunam = new Cliente();
+		lunam.setNome("Lunam Lapin");
+		nConta.setTitular(lunam);
+		
+		System.out.println(nConta.getTitular().getNome());
+		
+		nConta.getTitular().setProfissao("Médico");
+	}
+}

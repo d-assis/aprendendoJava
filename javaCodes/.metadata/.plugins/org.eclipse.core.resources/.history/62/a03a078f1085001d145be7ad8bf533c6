@@ -1,0 +1,10 @@
+package bytebank_encapsulado;
+
+public class TestaValores {
+	public static void main(String[] args) {
+		Conta acc = new Conta(1500,656184);
+		
+		System.out.println(acc.getAgencia());
+		System.out.println(acc.getNumero());
+	}
+}

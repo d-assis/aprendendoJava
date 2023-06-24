@@ -1,0 +1,23 @@
+In Java, the `final` keyword has different meanings depending on where it is used. Let's focus on its usage in the context of variables.
+
+When used with variables, the `final` keyword indicates that the variable's value cannot be changed once it has been assigned. It essentially makes the variable a constant, meaning its value remains the same throughout its lifetime.
+
+In the example I provided earlier:
+
+```java
+static final int MAX_VALUE = 100;
+```
+
+The `final` keyword is used to declare the `MAX_VALUE` variable as a constant. Once assigned, the value of `MAX_VALUE` cannot be modified.
+
+Here's what you need to know about `final` variables:
+
+1. Initialization: `final` variables must be assigned a value at the time of declaration or within the constructor of the class.
+
+2. Immutability: Once assigned, the value of a `final` variable cannot be changed. It remains constant.
+
+3. Naming convention: By convention, the names of `final` variables are written in uppercase letters with underscores separating words (e.g., `MAX_VALUE`).
+
+The usage of `final` variables ensures that their values are fixed and cannot be accidentally modified, providing immutability and promoting code stability. They are often used for constants, configuration values, or values that should not be modified throughout the program.
+
+It's important to note that `final` can also be used with other entities in Java, such as methods or classes, with slightly different implications. But in the context of variables, it signifies immutability.

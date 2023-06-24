@@ -1,0 +1,85 @@
+package bytebank_encapsulado;
+
+public class Conta {
+	private double saldo;
+	private int agencia = 12;
+	private int numero;
+	private Cliente titular;
+	
+	void deposita(double valor) {
+		if(valor > 0) {
+		//linha abaixo poderia ser escrita assim:
+		//saldo += valor
+		this.saldo += valor;
+		//a palavra reservada this indica auto referência ao objeto instanciado a partir dessa classe
+		//e seu uso é opcional no caso acima
+		}
+	}
+	
+	public boolean saca(double valor){
+		if(valor < 0 || valor > this.saldo) {
+			System.out.println("valor indisponível para saque");
+			return false;
+		} else {
+			this.saldo -= valor;
+			System.out.println("sacou R$" + valor + " e o novo saldo é R$" + this.saldo);
+			return true;
+		}
+	}
+	
+	public boolean pix(double valor, Conta destino) {
+		if(valor > this.saldo) {
+			//System.out.println("valor insdisponível");
+			return false;
+		} else {
+			this.saldo -= valor;
+			//destino.saldo += valor;
+			destino.deposita(valor);
+			//System.out.println("Transferiu R$" + valor + " para " + destino.titular);
+			//System.out.println("Seu novo saldo é R$" + this.saldo);
+			return true;
+		}
+	}
+	
+	public double getSaldo() {
+		return this.saldo;
+	}
+	
+	public int getNumero() {
+		return this.numero;
+	}
+	
+	public void setNumero(int num) {
+		if (num <= 0) {
+			System.out.println("Não é permitido o uso de números negativos, insira um número válido");
+			//o uso da palavra reservada return é permitido num método void
+			//no entanto, return não pode ser seguido por nenhuma informação já que o retorno é vazio
+			//usamos o termo nesse caso para parar a execução do método mediante a condição determinada no if
+			return;
+		}
+		this.numero = num;
+	}
+	
+	public int getAgencia() {
+		return this.agencia;
+	}
+	
+	public void setAgencia(int novaAgencia) {
+		if (novaAgencia <= 0) {
+			System.out.println("Não é permitido o uso de números negativos, insira um número válido");
+			//o uso da palavra reservada return é permitido num método void
+			//no entanto, return não pode ser seguido por nenhuma informação já que o retorno é vazio
+			//usamos o termo nesse caso para parar a execução do método mediante a condição determinada no if
+			return;
+		}
+		this.agencia = novaAgencia;
+	}
+	
+	public Cliente getTitular() {
+		return this.titular;
+	}
+	
+	public void setTitular(Cliente titu) {
+		this.titular = titu;
+	}
+}

@@ -1,0 +1,10 @@
+package bytebank_encapsulado;
+
+public class TestaValores {
+	public static void main(String[] args) {
+		Conta acc = new Conta();
+		
+		acc.setAgencia(-10);
+		acc.setNumero(-655855);
+	}
+}

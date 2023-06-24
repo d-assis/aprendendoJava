@@ -1,0 +1,51 @@
+When it comes to writing information such as type, visibility, and other details for methods, attributes, and classes in Java, there is a specific order to follow. Let's go through it step by step.
+
+For classes:
+1. Class visibility modifier: `public`, `protected`, or `private`.
+2. Access modifiers: `abstract`, `final`, or `static`.
+3. The keyword `class` followed by the class name.
+4. Inheritance (if applicable): `extends` followed by the superclass name.
+5. Implemented interfaces (if applicable): `implements` followed by interface names.
+
+Here's an example of a class declaration following the order:
+
+```java
+public abstract class MyClass extends SuperClass implements Interface1, Interface2 {
+    // Class members go here
+}
+```
+
+For attributes (instance variables):
+1. Attribute visibility modifier: `public`, `protected`, or `private`.
+2. Access modifiers: `static`, `final`, or `volatile`.
+3. Attribute type.
+4. Attribute name.
+5. Initialization (if applicable).
+
+Here's an example of an attribute declaration following the order:
+
+```java
+private static final int MAX_VALUE = 100;
+```
+
+For methods:
+1. Method visibility modifier: `public`, `protected`, or `private`.
+2. Access modifiers: `abstract`, `final`, `static`, or `synchronized`.
+3. Method return type.
+4. Method name.
+5. Method parameters (if applicable).
+6. Method exceptions (if applicable).
+
+Here's an example of a method declaration following the order:
+
+```java
+public void doSomething(int parameter) throws IOException {
+    // Method implementation goes here
+}
+```
+
+It's important to note that some parts are optional depending on the specific requirements of your code. Additionally, the order I've provided is a general guideline, but there might be exceptions based on coding conventions or specific project requirements.
+
+By following these guidelines, you ensure consistency and readability in your code. It helps other developers, including your future self, understand and navigate your codebase more easily.
+
+Keep up the great work in your Java studies, and feel free to ask if you have any more questions!

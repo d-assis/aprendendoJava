@@ -1,0 +1,10 @@
+package class_car;
+
+public class TestaClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
